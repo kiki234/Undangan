@@ -174,7 +174,7 @@
             margin-bottom: 5px;
         }
 
-        /* Peta & QR Code */
+        /* Peta & QR Code Custom */
         .map-section {
             background-color: rgba(184, 134, 11, 0.05);
             padding: 20px;
@@ -182,13 +182,14 @@
             border: 1px dashed var(--gold);
         }
 
-        .qr-image {
-            width: 150px;
-            height: 150px;
+        .qr-image-custom {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
             margin: 10px auto;
-            border: 5px solid #fff;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: block;
         }
 
         /* Footer / Keluarga */
@@ -286,15 +287,12 @@
                 </div>
             </div>
 
-            <!-- BAGIAN PETA & QR CODE (BARU DITAMBAHKAN) -->
+            <!-- BAGIAN PETA & QR CODE (MENGGUNAKAN GAMBAR 701655.png) -->
             <div class="section map-section">
                 <h3 class="serif" style="color: var(--dark-bg); margin-bottom: 10px;">Lokasi Acara</h3>
-                <p style="font-size: 0.8rem; color: #555; margin-bottom: 10px;">
-                    Scan QR Code di bawah ini untuk panduan arah menuju lokasi acara:
-                </p>
                 
-                <!-- URL ini secara otomatis di-generate (API) menjadi QR Code yang mengarah ke Google Maps pencarian alamat -->
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.google.com/maps/search/?api=1%26query=Desa+Budur+Blok+Sura+Ciwaringin+Cirebon" alt="QR Code Google Maps" class="qr-image">
+                <!-- Memanggil file gambar QR Code yang Anda lampirkan -->
+                <img src="701655.png" alt="QR Code Lokasi" class="qr-image-custom">
                 
                 <p style="font-size: 0.8rem; color: #555; margin-top: 15px;">
                     Atau gunakan tombol navigasi berikut:
