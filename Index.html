@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Khitanan - M. Alfatih Azamy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #1a0f0a;
+            --light-bg: #fdfbf7;
+            --gold: #b8860b;
+            --text-dark: #333333;
+            --text-light: #f4f4f4;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            color: var(--text-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px; /* Ukuran mobile */
+            background-color: var(--light-bg);
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Tipografi */
+        .title-script {
+            font-family: 'Great Vibes', cursive;
+            color: var(--gold);
+            font-size: 3rem;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Cover Section */
+        #cover {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: var(--dark-bg);
+            background-image: radial-gradient(circle, #2a1b14 0%, #1a0f0a 100%);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            z-index: 100;
+            transition: opacity 1s ease;
+        }
+
+        #cover h3 {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        #cover p {
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-open {
+            background-color: var(--gold);
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .btn-open:hover {
+            transform: scale(1.05);
+        }
+
+        /* Main Content */
+        #content {
+            display: none; /* Disembunyikan awalnya */
+            padding: 40px 20px;
+            text-align: center;
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .doa {
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .salam {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .intro-text {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .parents {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+
+        /* Event Box */
+        .event-box {
+            background-color: #fff;
+            border: 2px solid var(--gold);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .date {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--dark-bg);
+            margin: 10px 0;
+            border-top: 1px solid var(--gold);
+            border-bottom: 1px solid var(--gold);
+            padding: 10px 0;
+        }
+
+        .details p {
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        /* Footer / Keluarga */
+        .keluarga {
+            font-size: 0.8rem;
+            line-height: 1.5;
+            margin-top: 30px;
+        }
+        
+        .keluarga-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .turut-mengundang {
+            text-align: left;
+            font-size: 0.75rem;
+            background-color: rgba(184, 134, 11, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: var(--gold);
+            margin: 20px auto;
+        }
+        
+        /* Dekorasi Batik Sederhana */
+        .ornament {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Halaman Sampul Depan -->
+        <div id="cover">
+            <div class="ornament">❁</div>
+            <h3 class="serif">Undangan Khitanan</h3>
+            <div class="divider"></div>
+            <h1 class="title-script">M. Alfatih Azamy</h1>
+            <p>Rabu, 14 Oktober 2026</p>
+            <button class="btn-open" onclick="openInvitation()">Buka Undangan</button>
+        </div>
+
+        <!-- Isi Undangan -->
+        <div id="content">
+            <div class="section">
+                <p class="doa">
+                    "Ya Allah...<br>
+                    Muliakan Anak Kami ini, Panjangkanlah Umurnya,<br>
+                    Terangkan hatinya, Teguhkanlah Imannya,<br>
+                    Perbaikilah Amal perbuatannya, Lapangkanlah Rejekinya,<br>
+                    dekatkanlah ia pada Kebaikan dan jauhkanlah ia dari Keburukan"
+                </p>
+                <div class="divider"></div>
+                <p class="salam serif">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+                <p class="intro-text">
+                    Saat manis dalam kenangan sejarah<br>
+                    seorang muslim adalah untuk pertama dan cuma sekali<br>
+                    ketika ia dikhitan Ya Allah limpahkan berkah<br>
+                    kepada putra kami yang dikhitan,
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="serif" style="font-size: 1.2rem; color: #666;">Khitanan :</h2>
+                <h1 class="title-script">M. Alfatih Azamy</h1>
+                <p class="parents">Putra Bpk. Ade Sobari & Ibu Ida Saida</p>
+                <p class="intro-text">
+                    Dengan memohon Rahmat dan Ridho Allah SWT, kami bermaksud<br>
+                    menyelenggarakan resepsi syukuran khitanan putra kami,<br>
+                    yang Insya Allah akan dilaksanakan pada :
+                </p>
+            </div>
+
+            <div class="event-box">
+                <h3 class="serif" style="color: var(--gold);">RABU</h3>
+                <div class="date serif">
+                    14<br>
+                    <span style="font-size: 1rem; font-weight: normal;">Oktober 2026</span>
+                </div>
+                <div class="details">
+                    <p><strong>Pukul 09.00 WIB s/d selesai</strong></p>
+                    <p><strong>Tempat:</strong></p>
+                    <p>Ds. Budur Blok Sura RT 02 RW 02<br>
+                    Kec. Ciwaringin Kab. Cirebon</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <p class="intro-text">
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila<br>
+                    Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'anya.
+                </p>
+                <p class="intro-text">
+                    Atas kehadiran serta do'a Bapak/Ibu/Saudara/i kami ucapkan terima kasih.<br><br>
+                    <span class="salam serif">Wassalamu'alaikum Warahmatullahi Wabarakatuh</span>
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section keluarga">
+                <p style="font-weight: bold; margin-bottom: 10px;">Kami yang berbahagia</p>
+                <div class="keluarga-grid">
+                    <div>
+                        <strong>Bpk. Ade Sobari</strong><br>
+                        <span style="font-size: 0.7rem;">(PGAS Solution Area Cirebon)</span>
+                    </div>
+                    <div>
+                        <strong>Ibu Ida Saida</strong><br>
+                        <span style="font-size: 0.7rem;">(Guru SDN Majasuka 2)</span>
+                    </div>
+                </div>
+                <div class="keluarga-grid" style="font-size: 0.75rem; color: #555;">
+                    <div>Kel. Bpk. Sobari (Alm)<br>Ibu Sunira (Almh)</div>
+                    <div>Kel. Bpk. Rubadi (Alm)<br>Ibu Suemi</div>
+                </div>
+
+                <div class="turut-mengundang">
+                    <strong>Turut Mengundang :</strong><br>
+                    - Bapak Giri Indrayanto (Area Head PGAS Solution Area Cirebon)<br>
+                    - Ibu Kasti S.Pd (Kepala Sekolah SDN Majasuka 2 - Palasah)<br>
+                    - Segenap Family
+                </div>
+            </div>
+            <div class="ornament">❁</div>
+        </div>
+    </div>
+
+    <script>
+        function openInvitation() {
+            const cover = document.getElementById('cover');
+            const content = document.getElementById('content');
+            
+            // Efek memudar
+            cover.style.opacity = '0';
+            
+            setTimeout(() => {
+                cover.style.display = 'none';
+                content.style.display = 'block';
+                // Scroll ke atas saat dibuka
+                window.scrollTo(0, 0);
+            }, 500); // Sesuai dengan durasi transisi CSS
+        }
+    </script>
+</body>
+</html>
