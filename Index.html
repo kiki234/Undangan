@@ -32,7 +32,7 @@
 
         .container {
             width: 100%;
-            max-width: 480px; /* Ukuran mobile */
+            max-width: 480px; 
             background-color: var(--light-bg);
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -83,7 +83,7 @@
             margin-bottom: 30px;
         }
 
-        .btn-open {
+        .btn-open, .btn-map {
             background-color: var(--gold);
             color: #fff;
             border: none;
@@ -95,15 +95,25 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
             transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .btn-open:hover {
+        .btn-open:hover, .btn-map:hover {
             transform: scale(1.05);
+        }
+
+        .btn-map {
+            font-size: 0.85rem;
+            padding: 10px 20px;
+            margin-top: 15px;
+            background-color: #333;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         /* Main Content */
         #content {
-            display: none; /* Disembunyikan awalnya */
+            display: none; 
             padding: 40px 20px;
             text-align: center;
             background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
@@ -164,6 +174,23 @@
             margin-bottom: 5px;
         }
 
+        /* Peta & QR Code */
+        .map-section {
+            background-color: rgba(184, 134, 11, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px dashed var(--gold);
+        }
+
+        .qr-image {
+            width: 150px;
+            height: 150px;
+            margin: 10px auto;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
         /* Footer / Keluarga */
         .keluarga {
             font-size: 0.8rem;
@@ -194,7 +221,6 @@
             margin: 20px auto;
         }
         
-        /* Dekorasi Batik Sederhana */
         .ornament {
             color: var(--gold);
             font-size: 2rem;
@@ -260,6 +286,23 @@
                 </div>
             </div>
 
+            <!-- BAGIAN PETA & QR CODE (BARU DITAMBAHKAN) -->
+            <div class="section map-section">
+                <h3 class="serif" style="color: var(--dark-bg); margin-bottom: 10px;">Lokasi Acara</h3>
+                <p style="font-size: 0.8rem; color: #555; margin-bottom: 10px;">
+                    Scan QR Code di bawah ini untuk panduan arah menuju lokasi acara:
+                </p>
+                
+                <!-- URL ini secara otomatis di-generate (API) menjadi QR Code yang mengarah ke Google Maps pencarian alamat -->
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.google.com/maps/search/?api=1%26query=Desa+Budur+Blok+Sura+Ciwaringin+Cirebon" alt="QR Code Google Maps" class="qr-image">
+                
+                <p style="font-size: 0.8rem; color: #555; margin-top: 15px;">
+                    Atau gunakan tombol navigasi berikut:
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Desa+Budur+Blok+Sura+RT+02+RW+02+Ciwaringin+Cirebon" target="_blank" class="btn-map">📍 Buka Google Maps</a>
+            </div>
+            <!-- AKHIR BAGIAN PETA & QR CODE -->
+
             <div class="section">
                 <p class="intro-text">
                     Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila<br>
@@ -314,7 +357,7 @@
                 content.style.display = 'block';
                 // Scroll ke atas saat dibuka
                 window.scrollTo(0, 0);
-            }, 500); // Sesuai dengan durasi transisi CSS
+            }, 500); 
         }
     </script>
 </body>
